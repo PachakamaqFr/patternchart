@@ -1,4 +1,4 @@
-![image](inpredo_logo.png)
+![image](tresorio_logo.png)
 
 Inpredo (INtelligent PREDictions) is an AI which literally looks into financial charts and predicts stock movements.
 
