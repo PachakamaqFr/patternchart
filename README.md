@@ -24,7 +24,7 @@ Create a new cloud computing project on Tresorio dashboard.
 
 Link your Github account and select patternchart repo.
 
-Choose a powerpack and add the following line to your project command :
+Choose a powerpack and add the following line to your project command : \
 `pip3 install -r requirements.txt`
 
 ![image](/img/projectscreen.png)
@@ -47,9 +47,7 @@ Go on your Tresorio dashboard and open patternchart project.
 Start a new training and add to you script the following command : 
 
 `mkdir -p /app/artifacts/data/train/sell` \
-`mkdir -p /app/artifacts/data/validation/sell` \
 `mkdir /app/artifacts/data/train/buy` \
-`mkdir /app/artifacts/data/validation/buy` 
 
 This will create the path of your output folders so you can dowload the generated dataset on the platform.
 
@@ -59,26 +57,16 @@ In order to convert Poloniex financial datas to charts, add the following comman
 
 This will create the charts and classify them into train/buy and train/sell folders.
 
-To create the validation set, copy aleatory files from your train folder to your validation folder. 
-To do so, in the following commands, replace X by the number of charts you want to transfer to your validation set (20% of the total number of files in your train folder is a good target) and add them to your project commands : 
-
-`shuf -znX -e /app/artifacts/data/train/buy/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/buy` \
-`shuf -znX -e /app/artifacts/data/train/sell/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/sell` \
-
 If you want to generate the all dataset, your project commands should look like this : 
 `pip3 install -r requirements.txt` \
 `mkdir -p /app/artifacts/data/train/sell` \
-`mkdir -p /app/artifacts/data/validation/sell` \
 `mkdir /app/artifacts/data/train/buy` \
-`mkdir /app/artifacts/data/validation/buy` \
 `python3 ./src/graphpoloniex.py` \
 `python3 ./src/graphkraken.py` \
 `python3 ./src/graphbinance.py` \
 `python3 ./src/graphbitfinex.py` \
 `python3 ./src/graphbitstamp.py` \
 `python3 ./src/graphcoinbase.py` \
-`shuf -zn6000 -e /app/artifacts/data/train/buy/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/buy` \
-`shuf -zn6000 -e /app/artifacts/data/train/sell/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/sell`
 
 
 There is no point to use a GPU for this task so select a pack XS or a pack S.
@@ -88,9 +76,27 @@ Start the task
 ![image](/img/generate.png)
 
 
-After running `graphwerk.py` it will take some time to write single jpg files under data/train folder.
-When script is done writing, then you need to take randomly roughly 20 percent of the training data and put it into validation data.
-You need this to be able to train a neural network and yes, I was too lazy to automate that as well.
+When the task is complete, a "download training results" appear. Click on it to download your collection of charts. 
+
+
+## Fifth step - Create your validation set and save your dataset on Tresorio cloud
+
+Unzip your output file and create a folder "validation" into the "data" folder.
+In the "validation" folder, create a "buy" folder and a "sell" folder.
+
+Choose randomly 20% of the files in /data/train/buy and place them into /data/validation/buy/
+Choose randomly 20% of the files in /data/train/sell and place them into /data/validation/sell/
+
+Now, your dataset is your ready. You can save it on Tresorio.
+
+Go into cloud computing/your datasets.
+Click on "Add new dataset" and select your data folder.
+
+Upload it and link it to your patternchart project. 
+
+The linked dataset will be copied into your environment each time you start a task. 
+The path of the linked dataset is `/app/datasets/nameofthedataset`
+ 
 
 ## Fifth step - Train the AI!
 
