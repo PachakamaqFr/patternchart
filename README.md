@@ -25,6 +25,7 @@ Create a new cloud computing project on Tresorio dashboard.
 Link your Github account and select patternchart repo.
 
 Choose a powerpack and add the following line to your project command 
+`pip3 install -r requirements.txt`
 
 ![image](projectscreen.png)
 
