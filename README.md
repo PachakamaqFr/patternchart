@@ -10,7 +10,7 @@ Tresorio, the eco-friendly and affordable alternative for all your tasks and pro
 
 Create an account on : https://tresorio.com/en/beta/
 
-![image](tresorioscreen.png)
+![image](/img/tresorioscreen.png)
 
 ## Second Step - Clone this repo:
 
@@ -20,14 +20,14 @@ Clone this repo on your personal github to be able to launch the project on Tres
 
 Create a new cloud computing project on Tresorio dashboard.
 
-![image](computingscreen.png)
+![image](/img/computingscreen.png)
 
 Link your Github account and select patternchart repo.
 
 Choose a powerpack and add the following line to your project command :
 `pip3 install -r requirements.txt`
 
-![image](projectscreen.png)
+![image](/img/projectscreen.png)
 
 ## Fourth Step - Generate your charts dataset
 
@@ -46,10 +46,10 @@ Datas are from https://www.cryptodatadownload.com/
 Go on your Tresorio dashboard and open patternchart project.
 Start a new training and add to you script the following command : 
 
-`mkdir -p /app/artifacts/data/train/sell`
-`mkdir -p /app/artifacts/data/validation/sell`
-`mkdir /app/artifacts/data/train/buy`
-`mkdir /app/artifacts/data/validation/buy`
+`$mkdir -p /app/artifacts/data/train/sell`
+`$mkdir -p /app/artifacts/data/validation/sell`
+`$mkdir /app/artifacts/data/train/buy`
+`$mkdir /app/artifacts/data/validation/buy`
 
 This will create the path of your output folders so you can dowload the generated dataset on the platform.
 
@@ -85,7 +85,7 @@ There is no point to use a GPU for this task so select a pack XS or a pack S.
 
 Start the task
 
-![image](generate.png)
+![image](/img/generate.png)
 
 
 After running `graphwerk.py` it will take some time to write single jpg files under data/train folder.
