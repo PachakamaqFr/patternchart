@@ -108,6 +108,11 @@ When the model training is complete, it will generate a model and weights file u
 
 From your PatternChart project, start a new training with the following project commands :
 
+`pip3 install -r requirements.txt` \
+`python3 ./src/train-binary.py` \
+
+Choose a pack M, L or XL to enjoy the power of a training accelerated by GPU.
+
 
 
 ## Sixth Step - Load Models and Predict
