@@ -1,4 +1,4 @@
-![image](tresorio_logo.png)
+![image](/img/tresorio_logo.png)
 
 A small project that use Tresorio cloud computing to generate a dataset of BTCUSD charts and train an AI to look into the charts and predict stock movements.
 
