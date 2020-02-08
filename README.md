@@ -90,12 +90,12 @@ Choose randomly 20% of the files in /data/train/sell and place them into /data/v
 Now, your dataset is your ready. You can save it on Tresorio.
 
 Go into cloud computing/your datasets.
-Click on "Add new dataset", call it "chart" and select your "data" folder.
+Click on "Add new dataset", call it "chartset" and select your "data" folder.
 
 Upload it and link it to your patternchart project. 
 
 The linked dataset will be copied into your environment each time you start a task. 
-The path of the linked dataset is `/app/datasets/chart`
+The path of the linked dataset is `/app/datasets/chartset`
 
 
  
