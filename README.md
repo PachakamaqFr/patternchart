@@ -46,10 +46,10 @@ Datas are from https://www.cryptodatadownload.com/
 Go on your Tresorio dashboard and open patternchart project.
 Start a new training and add to you script the following command : 
 
-`$mkdir -p /app/artifacts/data/train/sell`
-`$mkdir -p /app/artifacts/data/validation/sell`
-`$mkdir /app/artifacts/data/train/buy`
-`$mkdir /app/artifacts/data/validation/buy`
+`mkdir -p /app/artifacts/data/train/sell \` 
+`mkdir -p /app/artifacts/data/validation/sell` \
+`mkdir /app/artifacts/data/train/buy`
+`mkdir /app/artifacts/data/validation/buy`
 
 This will create the path of your output folders so you can dowload the generated dataset on the platform.
 
