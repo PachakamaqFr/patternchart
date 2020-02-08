@@ -46,7 +46,7 @@ Datas are from https://www.cryptodatadownload.com/
 Go on your Tresorio dashboard and open patternchart project.
 Start a new training and add to you script the following command : 
 
-`mkdir -p /app/artifacts/data/train/sell` \ 
+`mkdir -p /app/artifacts/data/train/sell` \
 `mkdir -p /app/artifacts/data/validation/sell` \
 `mkdir /app/artifacts/data/train/buy` \
 `mkdir /app/artifacts/data/validation/buy` 
