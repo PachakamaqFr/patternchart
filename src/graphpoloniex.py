@@ -91,5 +91,5 @@ iter = 0
 
 
 for x in range(len(pd)-4):
-   graphwerk(iter, iter+20)
+   graphwerk(iter, iter+12)
    iter = iter + 2
