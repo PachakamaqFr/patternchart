@@ -85,6 +85,9 @@ There is no point to use a GPU for this task so select a pack XS or a pack S.
 
 Start the task
 
+![image](generate.png)
+
+
 After running `graphwerk.py` it will take some time to write single jpg files under data/train folder.
 When script is done writing, then you need to take randomly roughly 20 percent of the training data and put it into validation data.
 You need this to be able to train a neural network and yes, I was too lazy to automate that as well.
