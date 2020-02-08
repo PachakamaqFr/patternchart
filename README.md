@@ -46,10 +46,10 @@ Datas are from https://www.cryptodatadownload.com/
 Go on your Tresorio dashboard and open patternchart project.
 Start a new training and add to you script the following command : 
 
-`mkdir -p /app/artifacts/data/train/sell \` 
+`mkdir -p /app/artifacts/data/train/sell` \ 
 `mkdir -p /app/artifacts/data/validation/sell` \
-`mkdir /app/artifacts/data/train/buy`
-`mkdir /app/artifacts/data/validation/buy`
+`mkdir /app/artifacts/data/train/buy` \
+`mkdir /app/artifacts/data/validation/buy` 
 
 This will create the path of your output folders so you can dowload the generated dataset on the platform.
 
@@ -62,22 +62,22 @@ This will create the charts and classify them into train/buy and train/sell fold
 To create the validation set, copy aleatory files from your train folder to your validation folder. 
 To do so, in the following commands, replace X by the number of charts you want to transfer to your validation set (20% of the total number of files in your train folder is a good target) and add them to your project commands : 
 
-`shuf -znX -e /app/artifacts/data/train/buy/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/buy`
-`shuf -znX -e /app/artifacts/data/train/sell/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/sell`
+`shuf -znX -e /app/artifacts/data/train/buy/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/buy` \
+`shuf -znX -e /app/artifacts/data/train/sell/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/sell` \
 
 If you want to generate the all dataset, your project commands should look like this : 
-`pip3 install -r requirements.txt`
-`mkdir -p /app/artifacts/data/train/sell`
-`mkdir -p /app/artifacts/data/validation/sell`
-`mkdir /app/artifacts/data/train/buy`
-`mkdir /app/artifacts/data/validation/buy`
-`python3 ./src/graphpoloniex.py`
-`python3 ./src/graphkraken.py`
-`python3 ./src/graphbinance.py`
-`python3 ./src/graphbitfinex.py`
-`python3 ./src/graphbitstamp.py`
-`python3 ./src/graphcoinbase.py`
-`shuf -zn6000 -e /app/artifacts/data/train/buy/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/buy`
+`pip3 install -r requirements.txt` \
+`mkdir -p /app/artifacts/data/train/sell` \
+`mkdir -p /app/artifacts/data/validation/sell` \
+`mkdir /app/artifacts/data/train/buy` \
+`mkdir /app/artifacts/data/validation/buy` \
+`python3 ./src/graphpoloniex.py` \
+`python3 ./src/graphkraken.py` \
+`python3 ./src/graphbinance.py` \
+`python3 ./src/graphbitfinex.py` \
+`python3 ./src/graphbitstamp.py` \
+`python3 ./src/graphcoinbase.py` \
+`shuf -zn6000 -e /app/artifacts/data/train/buy/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/buy` \
 `shuf -zn6000 -e /app/artifacts/data/train/sell/*.jpg | xargs -0 cp -vt /app/artifacts/data/validation/sell`
 
 
