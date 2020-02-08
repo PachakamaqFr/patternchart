@@ -24,7 +24,7 @@ Create a new cloud computing project on Tresorio dashboard.
 
 Link your Github account and select patternchart repo.
 
-Choose a powerpack and add the following line to your project command 
+Choose a powerpack and add the following line to your project command :
 `pip3 install -r requirements.txt`
 
 ![image](projectscreen.png)
@@ -43,7 +43,16 @@ training dataset. As a starting point you can use one of the following timeserie
 
 Datas are from https://www.cryptodatadownload.com/
 
-This code line is found under `graphwerk.py` which is the factory that produces images out of time series financial data.
+Go on your Tresorio dashboard and open patternchart project.
+Start a new training and add to you script the following command : 
+
+`mkdir -p /app/artifacts/data/train/sell
+mkdir -p /app/artifacts/data/validation/sell
+mkdir /app/artifacts/data/train/buy
+mkdir /app/artifacts/data/validation/buy`
+
+This will create the path of your output folders so you can dowload the generated dataset on the platform.
+
 After running `graphwerk.py` it will take some time to write single jpg files under data/train folder.
 When script is done writing, then you need to take randomly roughly 20 percent of the training data and put it into validation data.
 You need this to be able to train a neural network and yes, I was too lazy to automate that as well.
