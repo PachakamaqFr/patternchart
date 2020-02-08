@@ -6,11 +6,11 @@ import uuid
 
 # Input your csv file here with historical data
 
-ad = genfromtxt('../financial_data/poloniexclean.csv', delimiter=',' ,dtype=str)
+ad = genfromtxt('/app/src/financial_data/krakenclean.csv', delimiter=',' ,dtype=str)
 pd = np.flipud(ad)
 
-buy_dir = '../data/train/buy/'
-sell_dir = '../data/train/sell/'
+buy_dir = '/app/artifacts/data/train/buy/'
+sell_dir = '/app/artifacts/data/train/sell/'
 
 def convolve_sma(array, period):
     return np.convolve(array, np.ones((period,))/period, mode='valid')
