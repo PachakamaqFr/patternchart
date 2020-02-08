@@ -18,6 +18,16 @@ Clone this repo on your personal github to be able to launch the project on Tres
 
 ## Third Step - Create a project on your Tresorio account 
 
+Create a new cloud computing project on Tresorio dashboard.
+
+![image](computingscreen.png)
+
+Link your Github account and select patternchart repo.
+
+Choose a powerpack and add the following line to your project command 
+
+![image](projectscreen.png)
+
 ## Fourth Step - Generate your charts dataset
 
 Before start to train a Convolutional Neural Network, first you need to create a
