@@ -83,7 +83,7 @@ test_datagen = ImageDataGenerator(
 train_generator = train_datagen.flow_from_directory(
     train_data_dir,
     target_size=(img_height, img_width),
-    shuffle=True,
+    #shuffle=True,
     batch_size=batch_size,
     class_mode='categorical'
 )
