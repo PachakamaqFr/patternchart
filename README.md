@@ -90,12 +90,14 @@ Choose randomly 20% of the files in /data/train/sell and place them into /data/v
 Now, your dataset is your ready. You can save it on Tresorio.
 
 Go into cloud computing/your datasets.
-Click on "Add new dataset" and select your data folder.
+Click on "Add new dataset", call it "chart" and select your "data" folder.
 
 Upload it and link it to your patternchart project. 
 
 The linked dataset will be copied into your environment each time you start a task. 
-The path of the linked dataset is `/app/datasets/nameofthedataset`
+The path of the linked dataset is `/app/datasets/chart`
+
+
  
 
 ## Fifth step - Train the AI!
@@ -103,6 +105,10 @@ The path of the linked dataset is `/app/datasets/nameofthedataset`
 Now we have the training and validation datasets in place, you can start training the AI model.
 For this you just need to run `train-binary.py` and this script will start using the dataset make a AI model out of it.
 When the model training is complete, it will generate a model and weights file under the models directory.
+
+From your PatternChart project, start a new training with the following project commands :
+
+
 
 ## Sixth Step - Load Models and Predict
 
